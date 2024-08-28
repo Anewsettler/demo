@@ -46,7 +46,6 @@ const createProduct = async (productData) => {
 const updateProduct = async (id, productData, userId) => {
   try {
     const product = await Product.findByPk(id);
-
     if (!product) {
       throw new Error('Product not found');
     }
